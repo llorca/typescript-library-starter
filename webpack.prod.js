@@ -1,13 +1,13 @@
-const path = require("path");
-const webpack = require("webpack");
-const merge = require("webpack-merge");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const path = require("path")
+const webpack = require("webpack")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin")
 
-const common = require("./webpack.common.js");
+const common = require("./webpack.common.js")
 
-module.exports = merge(common, {
+module.export = {
+  ...common,
+  mode: "production",
   entry: "./lib/index.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -20,12 +20,12 @@ module.exports = merge(common, {
     react: "react",
   },
   plugins: [
-    new CleanWebpackPlugin(["dist"]),
+    new CleanWebpackPlugin(),
     new UglifyJSPlugin({
       sourceMap: true,
     }),
     new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production"),
+      "process.env.NODE_ENV": '"production"',
     }),
   ],
-});
+}
