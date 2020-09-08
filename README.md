@@ -3,8 +3,9 @@
 A starter kit for developing TypeScript libraries and automating their releases.
 
 * **[TypeScript](https://github.com/Microsoft/TypeScript)** for scalable, statically typed JavaScript.
-* **[TSLint](https://github.com/palantir/tslint)** for TypeScript linting.
-* **[commitlint](https://github.com/marionebl/commitlint)** for commit linting via **[Husky](https://github.com/typicode/husky)** Git hooks.
+* **[ESLint](https://github.com/eslint/eslint)** for linting TypeScript.
+* **[Prettier](https://github.com/prettier/prettier)** for formatting code.
+* **[commitlint](https://github.com/conventional-changelog/commitlint)** for commit linting via **[Husky](https://github.com/typicode/husky)** Git hooks.
 * **[Commitizen](https://github.com/commitizen/cz-cli)** for standardized commit messages.
 * **[webpack](https://webpack.js.org)** for bundling assets.
 * **[semantic-release](https://github.com/semantic-release/semantic-release)** for effortless release management.
@@ -58,8 +59,10 @@ npm install -g semantic-release-cli
 Set it up. Note that the `.travis.yml` file already exists so there's no need to create it again via this step.
 
 ```
-semantic-release-cli setup
+npx semantic-release-cli setup
 ```
+
+Finally, set up the `GH_TOKEN` and `NPM_TOKEN` environment variables. More information can be found in the [**semantic-release** documentation](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/ci-configuration.md).
 
 From now on, a build will run through Travis after every push to the remote GitHub repository. If the build succeeds, a new release will be created on GitHub and published on NPM.
 
