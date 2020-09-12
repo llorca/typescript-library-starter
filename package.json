@@ -15,7 +15,7 @@
     "build:dist": "webpack --config webpack.prod.js",
     "build": "npm run build:dist && npm run build:example",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "commit": "git-cz",
+    "commit": "cz",
     "release": "semantic-release"
   },
   "repository": {
@@ -38,7 +38,7 @@
     "commitizen": "^4.2.1",
     "copy-webpack-plugin": "^6.1.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.5.0",
+    "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.2",
