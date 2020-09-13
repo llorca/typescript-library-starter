@@ -13,6 +13,7 @@ module.exports = {
     filename: "index.js",
     library: "TLS_CONFIG_LIBRARY_NAME",
     libraryTarget: "umd",
+    globalObject: "this",
   },
   devServer: {
     contentBase: "./example/build",

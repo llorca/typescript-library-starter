@@ -14,6 +14,7 @@ module.export = {
     filename: "index.js",
     library: "TLS_CONFIG_LIBRARY_NAME",
     libraryTarget: "umd",
+    globalObject: "this",
   },
   devtool: "source-map",
   externals: {
